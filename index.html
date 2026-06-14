@@ -1,81 +1,278 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bubbly Sims Finds</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background:#faf7ff;
-    margin:0;
+background:#f8f4ef;
+font-family:'Poppins',sans-serif;
+color:#6b5a4d;
 }
 
-header{
-    background:#e6d4ff;
-    text-align:center;
-    padding:40px;
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(248,244,239,.95);
+display:flex;
+justify-content:center;
+gap:50px;
+padding:20px;
+z-index:999;
+backdrop-filter:blur(10px);
 }
 
-h1{
-    margin:0;
+nav a{
+text-decoration:none;
+color:#8d6f5c;
+font-size:14px;
+letter-spacing:2px;
 }
 
 .hero{
-    text-align:center;
-    padding:50px;
+height:100vh;
+background:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1800') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
 }
 
-.button{
-    display:inline-block;
-    background:#d89cff;
-    color:white;
-    padding:15px 25px;
-    text-decoration:none;
-    border-radius:10px;
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(255,255,255,.35);
 }
 
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:90px;
+font-weight:700;
+color:#7d5f4d;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+letter-spacing:3px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:#d7b7b0;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+.section{
+padding:100px 10%;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:50px;
+text-align:center;
+margin-bottom:50px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    width:200px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
-    text-align:center;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
 }
-</style>
 
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+padding:20px;
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+}
+
+.posts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.post{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.post img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.post-content{
+padding:25px;
+}
+
+.post-content h3{
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+margin-bottom:10px;
+}
+
+.post-content a{
+display:inline-block;
+margin-top:15px;
+text-decoration:none;
+color:#b58274;
+font-weight:bold;
+}
+
+footer{
+padding:80px;
+text-align:center;
+}
+
+footer h2{
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+margin-bottom:15px;
+}
+
+</style>
 </head>
 <body>
 
-<header>
-<h1>✨ Bubbly Sims Finds ✨</h1>
-<p>CC • Builds • Downloads • Los Sims 4</p>
-</header>
+<nav>
+<a href="#">HOME</a>
+<a href="#">HATS</a>
+<a href="#">HAIR</a>
+<a href="#">BUILDS</a>
+<a href="#">FAVORITES</a>
+</nav>
 
-<div class="hero">
-<h2>Bienvenidos 💜</h2>
-<p>Mi colección favorita de contenido personalizado para Los Sims 4.</p>
-<a class="button" href="#">Explorar contenido</a>
+<section class="hero">
+<div class="hero-content">
+<h1>Bubbly Sims Finds</h1>
+<p>CC • BUILDS • DOWNLOADS</p>
+<a href="#finds" class="btn">Explore My Finds</a>
+</div>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Browse Categories</h2>
+
+<div class="categories">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200">
+<h3>🎩 Hats</h3>
 </div>
 
-<div class="cards">
-<div class="card">🎩<br>Sombreros</div>
-<div class="card">💇<br>Cabello</div>
-<div class="card">👗<br>Ropa</div>
-<div class="card">🏠<br>Construcciones</div>
-<div class="card">⭐<br>Favoritos</div>
-<div class="card">🎮<br>Mods</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200">
+<h3>💇 Hair</h3>
 </div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
+<h3>👗 Clothing</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200">
+<h3>🏠 Builds</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="finds">
+
+<h2 class="section-title">Latest Finds</h2>
+
+<div class="posts">
+
+<div class="post">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200">
+<div class="post-content">
+<h3>Sunrise Hat</h3>
+<p>One of my favorite hats this week.</p>
+<a href="#">Download →</a>
+</div>
+</div>
+
+<div class="post">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200">
+<div class="post-content">
+<h3>Olga Hat</h3>
+<p>Perfect for vintage inspired Sims.</p>
+<a href="#">Download →</a>
+</div>
+</div>
+
+<div class="post">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200">
+<div class="post-content">
+<h3>Bear Hat</h3>
+<p>Super cute and cozy.</p>
+<a href="#">Download →</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>About Me</h2>
+
+<p>
+Hi 💜 I'm Bubbly Girl.
+I share my favorite Sims 4 custom content, builds and finds.
+</p>
+
+</footer>
 
 </body>
 </html>
