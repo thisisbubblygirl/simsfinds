@@ -8,9 +8,9 @@ footer{text-align:center;padding:40px}
 .btn{display:inline-block;padding:10px 16px;background:#d7b7b0;color:white;text-decoration:none;border-radius:20px}
 
 .hero {
-  background-image: url("../img/background.png");
-  background-size: cover;
-  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  background: url("../img/background.png") center/cover no-repeat;
   height: 350px;
   color: white;
   display: flex;
